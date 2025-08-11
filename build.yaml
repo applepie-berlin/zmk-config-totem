@@ -1,20 +1,12 @@
 include:
-  # Linke Hälfte – USB + ZMK Studio
   - board: seeeduino_xiao_ble
     shield: totem_left
     kconfig: |
-      CONFIG_ZMK_STUDIO=y
-      CONFIG_ZMK_STUDIO_USB=y
       CONFIG_USB=y
       CONFIG_USB_DEVICE_STACK=y
       CONFIG_USB_CDC_ACM=y
       CONFIG_ZMK_USB_LOGGING=y
-      CONFIG_BT=y
-      CONFIG_ZMK_BLE=y
-
-  # Rechte Hälfte – nur Bluetooth
+      CONFIG_ZMK_STUDIO=y
+      CONFIG_ZMK_STUDIO_USB=y
   - board: seeeduino_xiao_ble
     shield: totem_right
-    kconfig: |
-      CONFIG_BT=y
-      CONFIG_ZMK_BLE=y
